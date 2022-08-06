@@ -20,6 +20,6 @@ The modules can be created on the fly and the system allows you to add the data 
 More information can be found [here](https://devpost.com/software/progress_tracking_team3).
 
 
-![alt text](https://github.com/ShivamAgarwal-code/Progress-Tracker/blob/master/home.png) <br/>
-![alt text](https://github.com/ShivamAgarwal-code/Progress-Tracker/blob/master/graph.png) <br/>
+![alt text](https://github.com/ripu23/Team3/blob/master/home.png) <br/>
+![alt text](https://github.com/ripu23/Team3/blob/master/graph.png) <br/>
       
