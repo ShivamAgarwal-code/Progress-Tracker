@@ -17,8 +17,6 @@ The modules can be created on the fly and the system allows you to add the data 
 4. Go to localhost:8080 and you are good to go.
 
 
-More information can be found [here](https://devpost.com/software/progress_tracking_team3).
-
 
 ![alt text](https://github.com/ripu23/Team3/blob/master/home.png) <br/>
 ![alt text](https://github.com/ripu23/Team3/blob/master/graph.png) <br/>
