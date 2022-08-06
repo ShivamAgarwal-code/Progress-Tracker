@@ -1,0 +1,9 @@
+clicktime/app/Controllers/HomeController.class
+clicktime/app/repositories/UserRepository.class
+clicktime/app/repositories/MovieRepository.class
+clicktime/app/App.class
+clicktime/app/entities/Movie.class
+clicktime/app/service/MovieService.class
+clicktime/app/entities/User.class
+clicktime/app/Controllers/MovieController.class
+clicktime/app/service/UserService.class
