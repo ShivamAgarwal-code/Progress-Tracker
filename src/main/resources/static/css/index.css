@@ -1,0 +1,34 @@
+body {
+  background-color: white;
+}
+
+.navbar-heading {
+  font-family: Helvetica;
+}
+
+.navbar-custom {
+  background-color: white;
+}
+
+.card-custom {
+  margin: 0 auto;
+  width: 100%;
+  margin: 2rem;
+}
+
+.button-left{
+  margin-left: -12px;
+}
+
+.selected-font{
+  color: red;
+  font-family: Helvetica;
+}
+.select-custom{
+  height: 38px;
+  width: 200px;
+}
+
+.bar{
+  color: blue;
+}

@@ -1,0 +1,67 @@
+<div class="container">
+  <div class="card card-custom">
+    <div class="card-header">
+      <h4 class="text-muted">Add Events</h4>
+    </div>
+    <div class="card-body">
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text">Select Object</span>
+        </div>
+        <select class="select-custom" ng-model="objectSelected" ng-change="populateEventsForForm(objectSelected)" ng-options="v for v in availableObjects">
+          <option value="">-- choose an option --</option>
+        </select>
+      </div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text">Select Event</span>
+        </div>
+        <select class="select-custom" ng-model="eventSelected" ng-change="populateFormData(eventSelected)" ng-options="v for v in eventsForObject">
+          <option value="">-- choose an option --</option>
+        </select>
+      </div>
+      <div ng-if="eventSelected">
+        <div>
+          <h5 class="text-muted">Create Object for {{objectSelected}}</h5>
+          <form>
+            <div class="form-group row" ng-repeat="obj in populateObj">
+              <label class="col-sm-2 col-form-label">{{obj}}</label>
+              <div class="col-sm-5">
+                <input type="text" class="form-control" ng-model="obj_$index" ng-change="updateObject(obj, obj_$index)">
+              </div>
+            </div>
+          </form>
+        </div>
+        <div>
+          <h5 class="text-muted">Create Event for {{eventSelected}}</h5>
+          <form>
+            <div class="form-group row" ng-repeat="obj1 in populateEvent">
+              <label class="col-sm-2 col-form-label">{{obj1}}</label>
+              <div class="col-sm-5">
+                <input type="text" class="form-control" ng-model="evt_$index" ng-change="updateEvent(obj1, evt_$index)">
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="card-footer">
+      <button type="button" class="btn btn-info pull-right" ng-click="save(eventSelected, objectSelected)">Save</button>
+      <input type="file" onchange="uploadCsv(this)" />
+    </div>
+  </div>
+  <script>
+    function uploadCsv(e, eventSelected, objectSelected) {
+
+      let file = e.files[0];
+      let formData = new FormData();
+      formData.append("files", file);
+      formData.append("objectName", objectSelected);
+      formData.append("eventName", eventSelected);
+      let xhr = new XMLHttpRequest();
+      xhr.open("POST", '/event/saveFile');
+      xhr.send(formData);
+    }
+  </script>
+
+</div>

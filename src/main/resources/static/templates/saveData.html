@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="card card-custom">
+    <div class="card-header">
+      <h4 class="text-muted">Add data</h4>
+    </div>
+    <div class="card-body">
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text">Select Object</span>
+        </div>
+        <select class="select-custom" ng-model="selected" ng-change="populateForm(selected)" ng-options="v for v in availableObjects">
+          <option value="">-- choose an option --</option>
+        </select>
+      </div>
+      <form ng-if="populateObj">
+        <div class="form-group row" ng-repeat="obj in populateObj">
+          <label class="col-sm-2 col-form-label">{{obj}}</label>
+          <div class="col-sm-5">
+            <input type="text" class="form-control" ng-model="field_$index" ng-change="updateObject(obj, field_$index)">
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="card-footer">
+      <button type="button" class="btn btn-info pull-right" ng-click="save()">Save</button>
+      <button type="button" class="btn btn-info pull-warning" ng-click="uploadCsv()"><input type="file" ID="fileSelect" ngf-select="onFileSelect($files)" accept=".xlsx, .xls, .csv" /></button>
+    </div>
+  </div>
+
+</div>

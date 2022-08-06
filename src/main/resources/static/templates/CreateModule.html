@@ -1,0 +1,62 @@
+<div class="container">
+  <div class="row">
+
+    <div class="card card-custom">
+      <div class="card-header">
+
+        <h3 class="text-muted">Please create a module</h3>
+      </div>
+      <div class="card-body">
+        <form>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text">Module Type</span>
+            </div>
+            <div class="col-xs-3">
+              <select class="select-custom" ng-model="moduleType.value" ng-options="v for v in moduleType.values">
+                <option value="">-- choose an option --</option>
+              </select>
+            </div>
+          </div>
+          <div class="input-group mb-3" ng-if="moduleType.value=='Event'">
+            <div class="input-group-prepend">
+              <span class="input-group-text">Select Object</span>
+            </div>
+            <select class="select-custom" ng-model="moduleObject.objectName" ng-options="v for v in availableObjects">
+              <option value="">-- choose an option --</option>
+            </select>
+            <div class="col-xs-3">
+            </div>
+          </div>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="">Module Name</span>
+            </div>
+            <div class="col-xs-3">
+              <input type="text" class="form-control" ng-model="moduleObject.moduleName">
+            </div>
+          </div>
+        </form>
+        <h5 class="text-muted"> Please add the attributes</h5>
+        <div ng-repeat="field in moduleObject.attributes">
+          <a href="" e-label="Label" editable-text="field.label">{{field.label || 'empty'}}</a>
+        </div>
+        <div class="input-group button-left">
+          <span class="input-group-btn">
+            <button type="button" class="btn btn-default btn-number" data-toggle="tooltip" data-placement="bottom" title="Add Attributes" ng-click="addAttributes()">
+              <span class="fa fa-plus-square-o btn-link"></span>
+            </button>
+          </span>
+          <span class="input-group-btn">
+            <button type="button" class="btn btn-default btn-number" data-toggle="tooltip" data-placement="bottom" title="Remove Attributes" ng-click="removeAttributes()">
+              <span class="fa fa-minus-square-o btn-link"></span>
+            </button>
+          </span>
+        </div>
+      </div>
+      <div class="card-footer">
+        <button type="button" class="btn btn-info pull-right" ng-click="saveModule()">Save</button>
+      </div>
+    </div>
+  </div>
+</div>
