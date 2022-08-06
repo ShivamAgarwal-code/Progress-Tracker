@@ -1,7 +1,7 @@
 # Track Me
-This application was developed as part of the Opportunity Hack hackathon which was held in Galvanize, Phoenix on October 20-21.
+This application was developed as part of the Code with Globalshala which is going in Unstop.
 
-Progress tracking application is a production-grade end to end application used to generically define, create and track the progress of users/volunteers which are mapped to corresponding event types. The application was aimed at NPOs like Will2Walk.
+Progress tracking application is a production-grade end to end application used to generically define, create and track the progress of users/volunteers which are mapped to corresponding event types.
 
 The application is based on following technologies: <br/>
 Backend - `Java`,`Spring-boot`. <br/>
